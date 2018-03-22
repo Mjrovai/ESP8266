@@ -24,37 +24,30 @@
 		<h2>Arduino GPIO Control</h2>
 	        
         <!-- buttons for GPIO 11 --> 
-        <h4>GPIO 11 
-		<button style="color:blue; id="111" class="led">ON</button> 
-		<button style="color:red; id="110" class="led">OFF</button> 
-                </p>
+        	<h4>GPIO 11 
+		<button style="color:blue"; id="111" class="led">ON</button> 
+		<button style="color:red"; id="110" class="led">OFF</button> 
 		
 		<!-- buttons for GPIO 12 -->  
 		<h4>GPIO 12 
-		<button style="color:blue; id="121" class="led">ON</button> 
-		<button style="color:red; id="120" class="led">OFF</button> 
-                </p>
+		<button style="color:blue"; id="121" class="led">ON</button> 
+		<button style="color:red"; id="120" class="led">OFF</button> 
 
 		<!-- buttons for GPIO 13 --> 
 		<h4>GPIO 13 
-		<button style="color:blue; id="131" class="led">ON</button> 
-		<button style="color:red; id="130" class="led">OFF</button> 
-                </p>
-		
-
+		<button style="color:blue"; id="131" class="led">ON</button> 
+		<button style="color:red"; id="130" class="led">OFF</button> 
 
  	</center>
 
 <script>
 // when a button is clicked
 $( ".led" ).click(function() {
-    // read value of GPIO11, GPIO12, GPIO13 id's
+        // read value of GPIO11, GPIO12, GPIO13 id's
 	var p = $(this).attr('id'); 
 
 	// send via GET to IP address with the parameter "pin" and value "p" 
-	$.get("http://10.0.1.14:80/", {pin:p}); 
-		
-  
+	$.get("http://10.0.1.14:80/", {pin:p}); 	
 });
 </script>
  
